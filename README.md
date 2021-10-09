@@ -31,4 +31,12 @@ When you first install Debian/Devuan and you try to update/upgrade, most of the 
      E: The repository 'cdrom://[Devuan GNU/Linux 3.1 beowulf amd64 - desktop 20210315] beowulf Release' does not have a Release file.
      N: Updating from such a repository can't be done securely, and is therefore disabled by default.
      N: See apt-secure(8) manpage for repository creation and user configuration details.
-  
+
+To solve this problem first we must type this command in order to edit the following file: 
+
+     sudo nano /etc/apt/sources.list
+
+Now we must uncomment the next lines:
+ 
+     deb http://deb.devuan.org/merged beowulf-security main
+     deb http://deb.devuan.org/merged beowulf-updates main
