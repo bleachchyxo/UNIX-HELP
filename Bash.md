@@ -66,3 +66,53 @@ And the output would be:
     Username: Chuxo
     Password:
     You are loged in
+## Add comments to your scripts
+Now that you will start working with many kinds of methods you can start adding comments between your script to give yourself a clue about whats going on. To make a coment just add a `#` before the line and you cant type whatever you want without interrupting your script.
+
+    #!/bin/bash
+    
+    #this comment wont appear in the terminal
+    echo "Hello World"
+And the output will be:
+    
+    $ Hello World
+## Functions
+Now we can start using functions.
+
+    #!/bin/bash
+
+    function greetings {
+            echo "Hello world!"
+    }
+
+    greetings
+
+The output:
+
+    $ Hello world!
+
+## Math
+This is isn't that bad as it sounds.
+
+How to sum variables?
+    
+    #!/bin/bash
+    
+    a=100
+    b=100
+    echo $((a + b))
+Output:
+
+    $ 200
+Number Comparison
+
+    #!/bin/bash
+    
+    num_a=100
+    num_b=100
+    
+    echo "is $num_a equal to $num_b ?"
+    echo $
+Output:
+
+    $ True
