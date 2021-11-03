@@ -32,7 +32,7 @@ When you first install Debian/Devuan and you try to update/upgrade, most of the 
      N: Updating from such a repository can't be done securely, and is therefore disabled by default.
      N: See apt-secure(8) manpage for repository creation and user configuration details.
 
-When we experimenting this sort of problem it means we have some some trouble with our packages repoistory mirrors. In order to fix this we must get in the official website, package repositories. In this case `https://www.devuan.org/os/packages`. We must check for the default configurations of our mirrors, in my case `Devuan 3.1 Beowulf (oldstable).
+When we experimenting this sort of problem it means we have some some trouble with our packages repoistory mirrors. In order to fix this we must get in the official website, package repositories. In this case `https://www.devuan.org/os/packages`. We must check for the default configurations of our mirrors, in my case `Devuan 3.1 Beowulf (oldstable)`.
 
      deb http://deb.devuan.org/merged beowulf          main
      deb http://deb.devuan.org/merged beowulf-updates  main
