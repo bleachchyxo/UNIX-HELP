@@ -48,15 +48,13 @@ And we should see some test like this:
 
      # deb cdrom:[Devuan GNU/Linux 3.1 beowulf amd64 - desktop 20210315]/ beowulf$
 
-     #deb cdrom:[Devuan GNU/Linux 3.1 beowulf amd64 - desktop 20210315]/ beowulf $
-
-     deb http://deb.devuan.org/merged beowulf         main
+     deb cdrom:[Devuan GNU/Linux 3.1 beowulf amd64 - desktop 20210315]/ beowulf $
 
      # A network mirror was not selected during install.  The following entries
      # are provided as examples, but you should amend them as appropriate
      # for your mirror of choice.
      #
-     deb http://deb.devuan.org/merged beowulf-security main
+     #deb http://deb.devuan.org/merged beowulf-security main
      # deb-src http://deb.devuan.org/merged beowulf-security main
 
      # beowulf-updates, previously known as 'volatile'
@@ -65,13 +63,18 @@ And we should see some test like this:
      # are provided as examples, but you should amend them as appropriate
      # for your mirror of choice.
      #
-     deb http://deb.devuan.org/merged beowulf-security main
+     # deb http://deb.devuan.org/merged beowulf-security main
      # deb-src http://deb.devuan.org/merged beowulf-security main
 
-     # beowulf-updates, previously known as 'volatile'
-     # A network mirror was not selected during install.  The following entries
-     # are provided as examples, but you should amend them as appropriate
-     # for your mirror of choice.
-#
-deb http://deb.devuan.org/merged beowulf-updates main
+First of all we must comment by adding a `#` at the start of the following line:
 
+     deb cdrom:[Devuan GNU/Linux 3.1 beowulf amd64 - desktop 20210315]/ beowulf $
+
+Now we must check the mirrors given in the official website and uncomment the exact same ones. If some mirror is missing, in my case:
+
+     deb http://deb.devuan.org/merged beowulf          main
+
+Simply add it on the file by typing it, I would recommend doing it in the given order so you avoid extra problems. Now that u added the packages repository mirrors just save the changes in the file and you are go to go. Check if its working by typing:
+
+     $ sudo apt-get update
+     $ sudo apt-get upgrade
