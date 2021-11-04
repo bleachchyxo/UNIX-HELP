@@ -78,3 +78,26 @@ Simply add it on the file by typing it, I would recommend doing it in the given 
 
      $ sudo apt-get update
      $ sudo apt-get upgrade
+
+# ifconfig command not found
+The `ifconfig` command sometimes is already installed, lately most of the UNIX distros dont have this command by default, so we need to install `net-tools`. But if its your case like mine, that I aready installed `net-tools` and everytime I type:
+
+     $ ifconfig
+    
+I get the the output:
+
+     bash: ifconfig: command not found
+
+You must type the following command:
+
+     $ sudo nano ~/.bashrc
+
+Now you go to the end of the file and add this line at the very bottom:
+
+     export PATH=$PATH:/sbin
+
+Now you save it and type this command to reflect your changes:
+
+     $ source ~/.bashrc
+
+And once you've done this your `ifconfig` command must be working correctly.
