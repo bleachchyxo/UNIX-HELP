@@ -106,3 +106,10 @@ Now you save it and type this command to reflect your changes:
      $ source ~/.bashrc
 
 And once you've done this your `ifconfig` command must be working correctly.
+
+# Trouble with "mlocate" command
+The `locate` command it's a really useful command in order to find specific files and their respective path. In my case the `locate` command isn't installed by default, I had to `sudo apt install mlocate` to install the mlocate package in order to use the command. Once installed whenever I wanted to find a file using this command it gave me the error:
+
+     ERROR : locate: can not stat () `/var/lib/mlocate/mlocate.db’: No such file or directory
+
+It's really simple to fix this because all you need to do is typing `sudo updatedb`. Once you've done that you ready to go.
