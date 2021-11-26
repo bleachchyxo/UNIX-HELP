@@ -79,6 +79,11 @@ Simply add it on the file by typing it, I would recommend doing it in the given 
      $ sudo apt-get update
      $ sudo apt-get upgrade
 
+## Note
+You can also uncomment the mirrors like `deb-src http://deb.devuan.org/merged beowulf-security main` In order to avoid future probles with:
+
+     Error :: You must put some 'source' URIs in your sources.list
+
 # ifconfig command not found
 The `ifconfig` command sometimes is already installed, lately most of the UNIX distros dont have this command by default, so we need to install `net-tools`. But if its your case like mine, that I aready installed `net-tools` and everytime I type:
 
