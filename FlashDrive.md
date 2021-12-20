@@ -34,19 +34,6 @@ In my case my flash drive is recognized as `/dev/sdb1` so thats going to be the 
 Once it finished umounting the disk you need to confirm you will be formating such a disk by typing:
 
     $ sudo mkfs.vfat /dev/sdb1
-
-## Burn an ISO image into a flash drive
-As we did before formating the flash drive, you wanna list all the divices in your filesystem in order to locate your flash drive and we do this with the
-command `lsblk`
-
-Now we need to become root with the command `su` so we can get root privileges and going to proceed burning the `.iso` image into the flash drive with the command `dd`
-
-    # dd if=Downloads/archlinux-2021.12.01-x86_64.iso of=/dev/sdb1 status="progress"
-
-And you wait till its over and you done.
-
-
-
     
 Once you've done this you are ready to go. Now by executing this command we'll proceed to format the flash drive
 
@@ -59,3 +46,13 @@ When the command finished executing you must get an output like this
     /dev/sdb1: 0 files, 1/8189967 clusters
 
 This means that you successfuly formated that flashd drive  
+
+## Burn an ISO image into a flash drive
+As we did before formating the flash drive, you wanna list all the divices in your filesystem in order to locate your flash drive and we do this with the
+command `lsblk`
+
+Now we need to become root with the command `su` so we can get root privileges and going to proceed burning the `.iso` image into the flash drive with the command `dd`
+
+    # dd if=Downloads/archlinux-2021.12.01-x86_64.iso of=/dev/sdb1 status="progress"
+
+And you wait till its over and you done.
