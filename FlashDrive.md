@@ -28,3 +28,8 @@ process until you've deleted every partition left.
 Now we need to create the new partition by typing `n`, then press `enter` 3 times to accept the default options and
 now to type `w` to write the new information into the flash drive.
 
+
+And finally we need to create the filesystem by typing
+
+    # mkfs.ext4 /dev/sdb
+
