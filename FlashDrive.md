@@ -33,3 +33,9 @@ And finally we need to create the filesystem by typing
 
     # mkfs.ext4 /dev/sdb
 
+## Burning an ISO into a flash drive
+
+You want to get into `root user` and locate your flash drive, in my case `/dev/sdb/` and the `iso` file is called
+`devuan_beowulf_3.1.1_i386_desktop.iso`
+
+    # dd if=devuan_beowulf_3.1.1_i386_desktop.iso of=/dev/sdb status="progress"
