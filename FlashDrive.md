@@ -14,3 +14,17 @@ mounting the flash drive with the following command:
 You can now `cd` into `/media/usb/` and see the content, when you're done just fire off:
 
     $ sudo umount /dev/sdb /media/usb/
+
+## Formating a Flash Drive
+
+First of all enter as a `root user`, now we can proceed formating the flash drive by using the command
+
+    # fdisk /dev/sdb
+  
+Next type `d` to delete a partition, type `1` to select the 1st partition then press `enter`. Continue repeating this
+process until you've deleted every partition left.
+
+
+Now we need to create the new partition by typing `n`, then press `enter` 3 times to accept the default options and
+now to type `w` to write the new information into the flash drive.
+
