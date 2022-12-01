@@ -113,3 +113,6 @@ The `locate` command it's a really useful command in order to find specific file
      ERROR : locate: can not stat () `/var/lib/mlocate/mlocate.db’: No such file or directory
 
 It's really simple to fix this because all you need to do is run the command `sudo updatedb`. Once you've done that you ready to go.
+
+# Set Time
+sudo date --set="1 DEC 2022 11:46:00 PM"
