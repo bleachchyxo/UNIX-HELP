@@ -45,3 +45,19 @@ Now we can check if we did everything correct by running `lsblk` and having an o
 In order to install basic programs on our operative system we are going to run
 
     basestrap /mnt base base-devel runit elogind-runit linux linux-firmware neovim
+
+Then in order for the system to recognize the partitions we are going to run
+
+    fstabgen -U /mnt >> /mnt/etc/fstab
+    
+## Chrooting
+
+In order to enter our system from the system we in we are going to `chroot` using the next command
+
+    artix-chroot /mnt
+    
+Leaving you with a terminal prompt looking like this:
+
+    sh-5.1#
+
+You are going to type `bash` in order to get bash tools
