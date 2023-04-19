@@ -40,3 +40,8 @@ Now we can check if we did everything correct by running `lsblk` and having an o
      └─sdb3   8:5    0 192.6G  0 part /mnt/home
      sr0     11:0    1  1024M  0 rom
     
+## Installing the basics on the system
+
+In order to install basic programs on our operative system we are going to run
+
+    basestrap /mnt base base-devel runit elogind-runit linux linux-firmware neovim
