@@ -82,3 +82,33 @@ Then just update the hardware clock
 You are going to edit the file `/etc/locale.gen` which lists all the different aviable locales for the system, in my case english so I will uncomment `en_US.UTF-8 UTF-8` and `en_US ISO-8859-1`. Once uncommented we save the file and run the command
 
     locale-gen
+
+Next we are going to create a file `/etc/locale.conf` and write on it
+
+    LANG=en_US.UTF-8
+
+## Installing networkmanager
+
+    pacman -S networkmanager networkmanager-runit
+    
+Now we are going to set the service to run by default in order to autostart
+
+    ln -s /etc/runit/sv/NetworkManager/ /etc/runit/runsvdir/current
+    
+## Creating some system files
+
+We are going to start giving a name to our machine/host by creating the file `/etc/hostname` and inside that file you are going to write your computers name, in my case `desktop`
+
+Now we are going to edit the already existing file `/etc/hosts`
+
+    127.0.0.1        localhost
+    ::1              localhost
+    127.0.1.1        desktop.localdomain  desktop
+    
+## Installing grub
+
+    pacman -S grub
+    
+To install `grub` in our disk
+
+    grub-install --target=i386-pc /dev/sdb
