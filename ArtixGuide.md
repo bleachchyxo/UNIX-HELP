@@ -61,3 +61,14 @@ Leaving you with a terminal prompt looking like this:
     sh-5.1#
 
 You are going to type `bash` in order to get bash tools
+
+## Setting our timezone
+
+In order to set our timezone we are going to create a symbolic link
+
+    ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+
+If you made it correctly while running:
+
+    $ ls -l /etc/localtime
+    lrwxrwxrwx 1 root root 39 Apr 18 15:31 /etc/localtime -> /usr/share/zoneinfo/America/New_York
