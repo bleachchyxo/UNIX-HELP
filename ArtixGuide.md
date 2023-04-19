@@ -112,3 +112,11 @@ Now we are going to edit the already existing file `/etc/hosts`
 To install `grub` in our disk
 
     grub-install --target=i386-pc /dev/sdb
+
+Finally we are going to create a `grub` config files
+
+    grub-mkconfig -o /boot/grub/grub.cfg
+    
+# Setting a password
+
+Type `passwd` and enter you password
