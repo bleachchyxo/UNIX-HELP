@@ -72,3 +72,13 @@ If you made it correctly while running:
 
     $ ls -l /etc/localtime
     lrwxrwxrwx 1 root root 39 Apr 18 15:31 /etc/localtime -> /usr/share/zoneinfo/America/New_York
+
+Then just update the hardware clock
+
+    hwclock --systohc
+
+## Setting locales
+
+You are going to edit the file `/etc/locale.gen` which lists all the different aviable locales for the system, in my case english so I will uncomment `en_US.UTF-8 UTF-8` and `en_US ISO-8859-1`. Once uncommented we save the file and run the command
+
+    locale-gen
