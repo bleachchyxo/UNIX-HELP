@@ -116,3 +116,16 @@ It's really simple to fix this because all you need to do is run the command `su
 
 # Set Time
 sudo date --set="1 DEC 2022 11:46:00 PM"
+
+     :~ $ lsblk
+     NAME        MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+     sda           8:0    0 465.8G  0 disk
+     └─md0         9:0    0 595.9G  0 raid5 /mnt/storage
+                                            /mnt/raiddata
+     sdb           8:16   0 298.1G  0 disk
+     └─md0         9:0    0 595.9G  0 raid5 /mnt/storage
+                                            /mnt/raiddata
+     sdc           8:32   0 465.8G  0 disk
+     └─md0         9:0    0 595.9G  0 raid5 /mnt/storage
+                                            /mnt/raiddata
+     nvme0n1     259:0    0 238.5G  0 disk
